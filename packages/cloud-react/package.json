@@ -31,6 +31,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@polkagate/extension-dapp": "latest",
     "@chainsafe/metamask-polkadot-adapter": "^0.6.0",
     "@chainsafe/metamask-polkadot-types": "^0.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -38,9 +39,9 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@polkadot-cloud/assets": "^0.3.0",
     "@polkadot-cloud/core": "^1.2.0",
     "@polkadot-cloud/utils": "^0.2.0",
+    "@polkadot-cloud/assets": "^0.3.0",
     "@polkadot/keyring": "^12.6.2",
     "@polkadot/util": "^12.6.2",
     "@polkadot/util-crypto": "^12.6.2",

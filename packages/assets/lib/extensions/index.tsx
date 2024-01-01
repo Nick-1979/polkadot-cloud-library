@@ -9,7 +9,8 @@ import {
 } from "../types";
 import Enkrypt from "./jsx/Enkrypt";
 import FearlessWallet from "./jsx/FearlessWallet";
-import MetaMask from "./jsx/MetaMask";
+import MetaMaskByChainsafe from "./jsx/MetaMaskByChainsafe";
+import PolkaMask from "./jsx/PolkaMask";
 import NovaWallet from "./jsx/NovaWallet";
 import PolkadotJS from "./jsx/PolkadotJS";
 import PolkaGate from "./jsx/PolkaGate";
@@ -35,7 +36,7 @@ export const Extensions: Record<string, ExtensionConfig> = {
     features: "*",
   },
   "metamask-polkadot-snap": {
-    title: "MetaMask Polkadot Snap",
+    title: "MetaMask Snap (by ChainSafe)",
     website: [
       "snaps.metamask.io",
       "snaps.metamask.io/snap/npm/chainsafe/polkadot-snap",
@@ -45,6 +46,11 @@ export const Extensions: Record<string, ExtensionConfig> = {
   polkagate: {
     title: "PolkaGate",
     website: "polkagate.xyz",
+    features: "*",
+  },
+  polkamask: {
+    title: "Metamask Snap (by PolkaGate)",
+    website: "apps.polkagate.xyz",
     features: "*",
   },
   "subwallet-js": {
@@ -82,10 +88,11 @@ export const ExtensionsArray = Object.entries(Extensions).map(
 export const ExtensionIcons: ExtensionIconRecords = {
   enkrypt: Enkrypt,
   "fearless-wallet": FearlessWallet,
-  "metamask-polkadot-snap": MetaMask,
+  "metamask-polkadot-snap": MetaMaskByChainsafe,
   novawallet: NovaWallet,
   "polkadot-js": PolkadotJS,
   polkagate: PolkaGate,
+  polkamask: PolkaMask,
   "subwallet-js": SubwalletJS,
   talisman: Talisman,
 };

@@ -9,6 +9,7 @@ import { defaultExtensionsContext } from "./defaults";
 import { AnyJson } from "../../utils/types";
 import { polkadotSnapAvailable } from "./utils";
 import { ExtensionFeature } from "@polkadot-cloud/assets/types";
+import { web3Enable } from "@polkagate/extension-dapp";
 
 export const ExtensionsContext = createContext<ExtensionsContextInterface>(
   defaultExtensionsContext
@@ -49,6 +50,7 @@ export const ExtensionsProvider = ({ children }: { children: ReactNode }) => {
   // `injectedWeb3` syncing process.
   const handleSnapInjection = async (hasInjectedWeb3: boolean) => {
     const snapAvailable = await polkadotSnapAvailable();
+    await web3Enable("polkadot-cloud"); // injects polkamask snap
 
     if (hasInjectedWeb3 || snapAvailable) {
       setStateWithRef(
